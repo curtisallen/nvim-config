@@ -11,8 +11,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 Plug 'dense-analysis/ale'
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Try built in neovim lsp instead of coc
-Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/completion-nvim'
+Plug 'neovim/nvim-lspconfig' " neovim lsp
+Plug 'nvim-lua/completion-nvim' " completion for neovim lsp
+Plug 'nvim-lua/popup.nvim'     " dependency for telescope
+Plug 'nvim-lua/plenary.nvim'   " dependency for telescope
+Plug 'nvim-lua/telescope.nvim' " fuzzy finder
+Plug 'nvim-treesitter/nvim-treesitter' " better syntax highlighting
 Plug 'tpope/vim-commentary'
 Plug 'dyng/ctrlsf.vim'
 Plug 'editorconfig/editorconfig-vim'

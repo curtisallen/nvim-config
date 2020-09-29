@@ -22,3 +22,5 @@ source $HOME/.config/nvim/plug-config/nerdtree.vim
 source $HOME/.config/nvim/plug-config/tagbar.vim
 source $HOME/.config/nvim/plug-config/lsp.vim
 source $HOME/.config/nvim/plug-config/completion.vim
+source $HOME/.config/nvim/plug-config/treesitter.vim
+source $HOME/.config/nvim/plug-config/telescope.vim
