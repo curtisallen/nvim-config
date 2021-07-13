@@ -16,7 +16,7 @@ Plug 'nvim-lua/completion-nvim' " completion for neovim lsp
 Plug 'nvim-lua/popup.nvim'     " dependency for telescope
 Plug 'nvim-lua/plenary.nvim'   " dependency for telescope
 Plug 'nvim-lua/telescope.nvim' " fuzzy finder
-Plug 'nvim-treesitter/nvim-treesitter' " better syntax highlighting
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " better syntax highlighting
 Plug 'tpope/vim-commentary'
 Plug 'dyng/ctrlsf.vim'
 Plug 'editorconfig/editorconfig-vim'

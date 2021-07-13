@@ -1,32 +1,34 @@
 lua <<EOF
-local nvim_lsp = require 'nvim_lsp'
-local configs = require 'nvim_lsp/configs'
-local util = require 'nvim_lsp/util'
-
--- configure hacklang lsp
-configs.hack = {
-  default_config = {
-    cmd = {"/usr/local/bin/hh_client", "lsp", "--from", "nvim"};
-    filetypes = {"hack", "php"};
-    root_dir = util.root_pattern(".git");
-  };
-  -- on_new_config = function(new_config) end;
-  -- on_attach = function(client, bufnr) end;
-  docs = {
-    description = [[
-]];
+local lspconfig = require'lspconfig'
+local configs = require'lspconfig/configs'
+-- Check if it's already defined for when I reload this file.
+if not configs.hack then
+  configs.hack = {
     default_config = {
-      root_dir = [[root_pattern(".git")]];
+      cmd = {"/usr/local/bin/com.docker.cli", "exec", "-i", "hhvm-slack-dev", "/usr/bin/hh_client", "lsp", "--from", "nvim"};
+      filetypes = {'hack'};
+      autostart = true;
+      -- root_dir = lspconfig.util.root_pattern(".git");
+      root_dir = function(fname)
+        return nil
+      end;
+      settings = {};
     };
-  };
-}
+  }
+end
 
-nvim_lsp.hack.setup{on_attach=require'completion'.on_attach}
+lspconfig.hack.setup{on_attach=require'completion'.on_attach}
+
 -- standard lsps that we use
-nvim_lsp.gopls.setup{on_attach=require'completion'.on_attach}
-nvim_lsp.tsserver.setup{on_attach=require'completion'.on_attach}
-nvim_lsp.bashls.setup{on_attach=require'completion'.on_attach}
-nvim_lsp.yamlls.setup{on_attach=require'completion'.on_attach}
+lspconfig.gopls.setup{on_attach=require'completion'.on_attach}
+lspconfig.tsserver.setup{on_attach=require'completion'.on_attach}
+lspconfig.bashls.setup{on_attach=require'completion'.on_attach}
+lspconfig.solargraph.setup{on_attach=require'completion'.on_attach}
+lspconfig.denols.setup{
+  on_attach=require'completion'.on_attach;
+  root_dir = lspconfig.util.root_pattern('.gitignore');
+}
+-- lspconfig.yamlls.setup{on_attach=require'completion'.on_attach}
 -- vim:et ts=2 sw=2
 EOF
 

@@ -6,7 +6,7 @@ set rtp+=/usr/local/opt/fzf
 let g:python3_host_prog = '/usr/local/bin/python3'
 let g:ctrlsf_ackprg = '/usr/local/bin/rg'
 
-syntax on
+" syntax on
 filetype plugin indent on
  
 " " This is only necessary if you use "set termguicolors".

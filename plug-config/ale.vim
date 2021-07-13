@@ -12,3 +12,9 @@ let g:ale_linters = {
       \ "hack": ['hack', 'hhast'] }
       "\ 'go': ['golangci-lint'],
 let g:ale_fix_on_save = 1
+let g:ale_disable_lsp = 1
+
+" Include the linter name (e.g. 'hack' or 'hhast'), code, and message in errors
+let g:ale_echo_msg_format = '[%linter%]% [code]% %s'
+" use docker lsp
+let g:ale_hack_hack_executable = '/usr/local/bin/com.docker.cli exec -i hhvm-slack-dev /usr/bin/hh_client lsp'
