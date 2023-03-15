@@ -12,7 +12,7 @@ Plug 'dense-analysis/ale'
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Try built in neovim lsp instead of coc
 Plug 'neovim/nvim-lspconfig' " neovim lsp
-Plug 'nvim-lua/completion-nvim' " completion for neovim lsp
+" Plug 'nvim-lua/completion-nvim' " completion for neovim lsp
 Plug 'nvim-lua/popup.nvim'     " dependency for telescope
 Plug 'nvim-lua/plenary.nvim'   " dependency for telescope
 Plug 'nvim-lua/telescope.nvim' " fuzzy finder
@@ -34,9 +34,14 @@ Plug 'tpope/vim-fugitive'
 Plug 'ruanyl/vim-gh-line'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-unimpaired'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'hhvm/vim-hack'
+Plug 'hrsh7th/nvim-cmp' " Autocompletion plugin
+Plug 'hrsh7th/cmp-nvim-lsp' " LSP source for nvim-cmp
+Plug 'saadparwaiz1/cmp_luasnip' " Snippets source for nvim-cmp
+Plug 'L3MON4D3/LuaSnip' " Snippets plugin
 
 call plug#end()
 

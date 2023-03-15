@@ -6,7 +6,7 @@ let g:go_fmt_command = "goimports"
 let g:go_rename_command = 'gopls'
 " disable vim-go :GoDef short cut (gd)
 " this is handled by LanguageClient [LC]
-let g:go_def_mapping_enabled = 0
+let g:go_def_mapping_enabled = 1
 let g:go_metalinter_command='golangci-lint'
 
 " make go build and run easier
