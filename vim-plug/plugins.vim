@@ -11,12 +11,17 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 Plug 'dense-analysis/ale'
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Try built in neovim lsp instead of coc
-Plug 'neovim/nvim-lspconfig' " neovim lsp
 " Plug 'nvim-lua/completion-nvim' " completion for neovim lsp
+Plug 'williamboman/mason.nvim', { 'do': ':MasonUpdate' }
+Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'neovim/nvim-lspconfig' " neovim lsp
+Plug 'mfussenegger/nvim-dap'
 Plug 'nvim-lua/popup.nvim'     " dependency for telescope
 Plug 'nvim-lua/plenary.nvim'   " dependency for telescope
 Plug 'nvim-lua/telescope.nvim' " fuzzy finder
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " better syntax highlighting
+Plug 'nvim-treesitter/nvim-treesitter-context'
+Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'tpope/vim-commentary'
 Plug 'dyng/ctrlsf.vim'
 Plug 'editorconfig/editorconfig-vim'
@@ -42,6 +47,7 @@ Plug 'hrsh7th/nvim-cmp' " Autocompletion plugin
 Plug 'hrsh7th/cmp-nvim-lsp' " LSP source for nvim-cmp
 Plug 'saadparwaiz1/cmp_luasnip' " Snippets source for nvim-cmp
 Plug 'L3MON4D3/LuaSnip' " Snippets plugin
+Plug 'ThePrimeagen/harpoon'
 
 call plug#end()
 

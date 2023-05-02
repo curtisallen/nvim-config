@@ -26,7 +26,9 @@ set nofoldenable
 set nocompatible
 set nobackup
 set nowb
-set number
+" set number
+set relativenumber
+set number relativenumber
 set noswapfile
 set ic
 set mouse=a 
