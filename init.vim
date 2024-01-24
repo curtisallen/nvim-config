@@ -23,6 +23,7 @@ source $HOME/.config/nvim/plug-config/tagbar.vim
 source $HOME/.config/nvim/plug-config/mason.vim
 source $HOME/.config/nvim/plug-config/lsp.vim
 source $HOME/.config/nvim/plug-config/null-ls.vim
+source $HOME/.config/nvim/plug-config/rhubarb.vim
 " source $HOME/.config/nvim/plug-config/completion.vim
 source $HOME/.config/nvim/plug-config/treesitter.vim
 source $HOME/.config/nvim/plug-config/telescope.vim
